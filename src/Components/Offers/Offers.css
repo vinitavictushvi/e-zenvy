@@ -1,0 +1,110 @@
+/* MAIN OFFERS SECTION */
+.offers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(
+      circle at top left,
+      rgba(138, 92, 255, 0.25),
+      transparent 40%
+    ),
+    linear-gradient(135deg, #0b0b12, #120a24);
+  max-width: 1500px;
+  box-shadow: 0 25px 60px rgba(138, 92, 255, 0.25);
+  overflow: hidden;
+  
+}
+
+/* LEFT CONTENT */
+.offer-left {
+  flex: 1;
+  color: #fff;
+  margin-left: 50px;
+}
+
+.offer-left h1 {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.1;
+  background: linear-gradient(90deg, #c7b6ff, #8a5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
+.offer-left p {
+  margin: 24px 0 40px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #b8b3ff;
+  font-weight: 600;
+}
+
+/* BUTTON */
+.offer-left button {
+  padding: 16px 42px;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #8a5cff, #5a2fff);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(138, 92, 255, 0.45);
+  transition: all 0.35s ease;
+}
+
+.offer-left button:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 18px 40px rgba(138, 92, 255, 0.65);
+}
+
+/* RIGHT IMAGE */
+.offer-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer-right img {
+  width: 420px;
+  max-width: 100%;
+  filter: drop-shadow(0 25px 40px rgba(138, 92, 255, 0.55));
+  animation: float 4.5s ease-in-out infinite;
+}
+
+/* FLOATING IMAGE ANIMATION */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media (max-width: 900px) {
+  .offers {
+    padding: 40px 20px;
+    justify-content: center;
+  }
+
+  /* TEXT HIDE */
+  .offer-left {
+    display: none;
+  }
+
+  /* IMAGE CENTER */
+  .offer-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .offer-right img {
+    width: 320px;
+    margin: auto;
+  }
+}

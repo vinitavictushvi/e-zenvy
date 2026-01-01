@@ -1,0 +1,81 @@
+/* ===================== DescriptionBox Container ===================== */
+.descriptionbox {
+  width: 100%;
+  max-width: 1300px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
+  color: #333333;
+}
+
+/* ===================== Navigator Tabs ===================== */
+.discriptionbox-navigator {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.discriptionbox-nav-box {
+  padding: 10px 0;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  color: #111111;
+  transition: all 0.3s ease;
+}
+
+.discriptionbox-nav-box::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6b6b; /* Accent color like E-Zenvy */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.discriptionbox-nav-box:hover::after,
+.discriptionbox-nav-box:not(.fade)::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.discriptionbox-nav-box.fade {
+  color: #888888;
+}
+
+/* ===================== Description Content ===================== */
+.descriptionbox-description p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #555555;
+}
+
+/* Optional: Smooth paragraph fade-in on hover */
+.descriptionbox-description p:hover {
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .descriptionbox {
+    padding: 15px;
+  }
+
+  .discriptionbox-navigator {
+    gap: 15px;
+  }
+
+  .descriptionbox-description p {
+    font-size: 14px;
+  }
+}

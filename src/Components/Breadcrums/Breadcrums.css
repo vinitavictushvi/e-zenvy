@@ -1,0 +1,32 @@
+/* Breadcrums.css */
+.breadcrum {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  gap: 5px; 
+  margin: 20px 0;
+  flex-wrap: wrap; 
+}
+
+.breadcrum img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+.breadcrum span {
+  margin-right: 5px;
+  white-space: nowrap;
+}
+
+
+.breadcrum span.clickable {
+  cursor: pointer;
+  color: #1a73e8;
+  transition: color 0.2s ease-in-out;
+}
+
+.breadcrum span.clickable:hover {
+  color: #0b4dbf;
+}

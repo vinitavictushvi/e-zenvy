@@ -1,0 +1,25 @@
+.popular {
+  background: #0b0b0f;
+  padding: 60px;
+}
+
+.popular h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.popular hr {
+  width: 120px;
+  height: 4px;
+  background: #8c5fff;
+  border: none;
+  margin: 0 auto 40px;
+}
+
+/* 🔥 GRID PARENT */
+.items-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}

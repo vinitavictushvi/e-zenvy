@@ -1,0 +1,172 @@
+.newletter {
+  max-width: 1500px;
+  padding: 80px 20px;
+  background: #0b0b0f;
+  box-shadow: 0 15px 40px rgba(107, 57, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Optional: subtle glowing animated background */
+.newletter::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(107,57,255,0.2) 0%, transparent 70%);
+  animation: glowMove 10s linear infinite;
+  z-index: 0;
+}
+
+@keyframes glowMove {
+  0% { transform: rotate(0deg) translateX(0); }
+  100% { transform: rotate(360deg) translateX(0); }
+}
+
+/* Inner Content Box */
+.newletter-inner {
+  background: #121212; /* card color */
+  padding: 50px 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(107, 57, 255, 0.5);
+  border: 1px solid rgba(107,57,255,0.2);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newletter-inner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(107, 57, 255, 0.7);
+}
+
+/* Headline */
+.newletter-inner h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* Paragraph */
+.newletter-inner p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* Input + Button Container */
+.newletter-inner > div {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Email Input */
+.newletter-inner input[type='email'] {
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid #555;
+  outline: none;
+  width: 100%;
+  max-width: 280px;
+  font-size: 1rem;
+  background: #0b0b0f;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.newletter-inner input[type='email']::placeholder {
+  color: #888;
+}
+
+.newletter-inner input[type='email']:focus {
+  border-color: #6b39ff;
+  box-shadow: 0 0 15px rgba(107,57,255,0.3);
+}
+
+/* Subscribe Button */
+.newletter-inner button {
+  padding: 16px 36px;
+  border-radius: 12px;
+  border: none;
+  background: #ffcb05;
+  color: #0b0b0f;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newletter-inner button:hover {
+  background: #e6b004;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255,203,5,0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newletter-inner > div {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .newletter-inner input[type='email'],
+  .newletter-inner button {
+    width: 100%;
+  }
+
+  .newletter-inner {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .newletter-inner h1 {
+    font-size: 2rem;
+  }
+  .newletter-inner p {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .newletter-inner h1 {
+    font-size: 2.4rem;
+  }
+  .newletter-inner p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .newletter-inner > div {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .newletter-inner input[type='email'],
+  .newletter-inner button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .newletter-inner h1 {
+    font-size: 2rem;
+  }
+  .newletter-inner p {
+    font-size: 1rem;
+  }
+}
