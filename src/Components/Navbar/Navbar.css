@@ -3,7 +3,7 @@
   width: 92%;
   padding: 15px 60px;
   display: flex;
-  justify-content: space-between; /* desktop me logo left, menu center, login/cart right */
+  justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
@@ -13,7 +13,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* LOGO */
+/* ===================== LOGO ===================== */
 .nav-logo img {
   height: 80px;
   transition: transform 0.3s ease;
@@ -23,13 +23,12 @@
   transform: scale(1.05);
 }
 
-/* DESKTOP MENU */
+/* ===================== DESKTOP MENU ===================== */
 .nav-menu {
   list-style: none;
   display: flex;
   gap: 45px;
   font-weight: 500;
-  margin-left: 250px;
   font-size: 16px;
 }
 
@@ -59,12 +58,11 @@
   transform: translateY(-2px);
 }
 
-/* LOGIN + CART */
+/* ===================== LOGIN + CART ===================== */
 .nav-login-cart {
   display: flex;
   align-items: center;
   gap: 20px;
-  position: relative;
 }
 
 .nav-login-cart button {
@@ -85,6 +83,7 @@
   box-shadow: 0 6px 12px rgba(107,57,255,0.3);
 }
 
+/* CART ICON */
 .cart-icon {
   position: relative;
 }
@@ -113,17 +112,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 2px rgba(0,0,0,0.3);
 }
 
-/* HAMBURGER */
+/* ===================== HAMBURGER ===================== */
 .hamburger {
   display: none;
   height: 26px;
   cursor: pointer;
 }
 
-/* MOBILE MENU */
+/* ===================== MOBILE MENU ===================== */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -148,7 +146,6 @@
   font-size: 18px;
   font-weight: 500;
   padding: 15px 0;
-  transition: all 0.3s ease;
 }
 
 .mobile-menu a:hover {
@@ -157,38 +154,49 @@
 }
 
 .mobile-menu.active {
+  display: flex;
   transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
-  display: flex;
 }
 
 /* ===================== RESPONSIVE ===================== */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .navbar {
     padding: 15px 30px;
   }
+
   .nav-menu {
     gap: 25px;
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
+
   .nav-menu {
-    display: none; /* hide desktop menu */
+    display: none;
   }
 
   .hamburger {
     display: block;
   }
 
-  /* Mobile view: align logo left, hamburger & login/cart right */
   .navbar {
     justify-content: space-between;
   }
 
+  /* 🔥 MAIN FIX HERE */
   .nav-login-cart {
-    margin-left: 250px;
+    margin-left: 0;      /* ❌ no fixed margin */
+    gap: 15px;
+  }
 
+  .nav-login-cart button {
+    padding: 8px 16px;
+    font-size: 13px;
   }
 }
+
